@@ -23,10 +23,13 @@ pip-log.txt
 #Translations
 *.mo
 
-#Mr Developer
+#Virtualenv e bytcodes
 venv
 *.pyc
 build
 
 # Migrations
 microblog/migrations
+
+# Ignorar vscode
+.vscode
