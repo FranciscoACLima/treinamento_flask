@@ -30,7 +30,9 @@ def index():
             'body': 'Vingador foi um ótimo filme!'
         }
     ]
-    return render_template('index.html', title='Home', posts=posts)
+    users = User.query.all()
+    return render_template('index.html', title='Home',
+                           posts=posts, users=users)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -99,3 +101,35 @@ def edit_profile():
         form.about_me.data = current_user.about_me
     return render_template('edit_profile.html', title='Edit Profile',
                            form=form)
+
+
+@app.route('/follow/<username>')
+@login_required
+def follow(username):
+    user = User.query.filter_by(username=username).first()
+    if user is None:
+        flash('Usuário {} não encontrado.'.format(username))
+        return redirect(url_for('index'))
+    if user == current_user:
+        flash('Você não pode sequir a si mesmo!')
+        return redirect(url_for('user', username=username))
+    current_user.follow(user)
+    db.session.commit()
+    flash('Você está seguindo {}!'.format(username))
+    return redirect(url_for('user', username=username))
+
+
+@app.route('/unfollow/<username>')
+@login_required
+def unfollow(username):
+    user = User.query.filter_by(username=username).first()
+    if user is None:
+        flash('Usuário {} não encontrado.'.format(username))
+        return redirect(url_for('index'))
+    if user == current_user:
+        flash('Você não pode deixar de seguir a si mesmo!')
+        return redirect(url_for('user', username=username))
+    current_user.unfollow(user)
+    db.session.commit()
+    flash('Você deixou de seguir {}.'.format(username))
+    return redirect(url_for('user', username=username))
