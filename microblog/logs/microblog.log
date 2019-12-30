@@ -96,3 +96,5 @@ Traceback (most recent call last):
     return type.__call__(cls, *args, **kwargs)
 TypeError: __init__() missing 1 required positional argument: 'original_username'
 2019-12-30 14:59:35,236 INFO: Microblog startup [in /var/www/treinamento_flask/microblog/app/__init__.py:45]
+2019-12-30 17:06:48,276 INFO: Microblog startup [in /var/www/treinamento_flask/microblog/app/__init__.py:45]
+2019-12-30 17:07:01,192 INFO: Microblog startup [in /var/www/treinamento_flask/microblog/app/__init__.py:45]

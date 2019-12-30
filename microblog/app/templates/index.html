@@ -4,4 +4,15 @@
     {% for post in posts %}
     <div><p>{{ post.author.username }} disse: <b>{{ post.body }}</b></p></div>
     {% endfor %}
-{% endblock %}
+
+    <hr>
+    <h2>Usuários registrados no sistema</h2>
+    {% for user in users %}
+        <p>
+            {{ user.username }}, {{ user.email }} -
+            <a href=" {{ url_for('user', username=user.username) }}">Perfil</a>
+        </p>
+    {% endfor %}
+
+    {% endblock %}
+
