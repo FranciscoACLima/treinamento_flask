@@ -44,3 +44,9 @@ class RegistrationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
             raise ValidationError('Por favor use um e-mail diferente.')
+
+
+class PostForm(FlaskForm):
+    post = TextAreaField('Diga algo', validators=[
+        DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField('Gravar')
