@@ -1,6 +1,8 @@
+# variaveis do flask
 FLASK_APP=microblog.py
+FLASK_DEBUG=1
 
-# configuracoes e-mail
+# variaveis de configuracoes de e-mail
 MAIL_SERVER=smtp.outlook.com
 MAIL_USERNAME=franciscoaclima@outlook.com
 MAIL_USE_TLS=1
