@@ -33,3 +33,6 @@ microblog/migrations
 
 # Ignorar vscode
 .vscode
+
+# microblog logs
+microblog.log*
