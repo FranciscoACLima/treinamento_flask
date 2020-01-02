@@ -10,10 +10,10 @@
               <a href="{{ url_for('user', username=post.author.username) }}">
                 {{ post.author.username }}
               </a>
-              disse:
+              disse {{ moment(post.timestamp).fromNow() }}:
             </p>
             <p class="lead">{{ post.body }}</p>
-            <small>{{ post.timestamp }}</small>
+            
         </td>
     </tr>
 </table>
