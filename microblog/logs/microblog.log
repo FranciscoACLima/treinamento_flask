@@ -101,3 +101,4 @@ TypeError: __init__() missing 1 required positional argument: 'original_username
 2019-12-31 10:51:07,845 INFO: Microblog startup [in /var/www/treinamento_flask/microblog/app/__init__.py:47]
 2019-12-31 11:39:31,144 INFO: Microblog startup [in /var/www/treinamento_flask/microblog/app/__init__.py:47]
 2020-01-02 09:24:22,959 INFO: Microblog startup [in C:\projetos\treinamento_flask\microblog\app\__init__.py:52]
+2020-01-03 12:25:41,323 INFO: Microblog startup [in C:\projetos\treinamento_flask\microblog\app\__init__.py:74]
