@@ -36,3 +36,6 @@ microblog/migrations
 
 # microblog logs
 microblog.log*
+
+# Variáveis de ambiente que não devem ser guaradas
+.env
