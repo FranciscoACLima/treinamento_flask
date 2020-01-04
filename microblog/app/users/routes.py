@@ -39,3 +39,10 @@ def edit():
         form.about_me.data = current_user.about_me
     return render_template('users/edit.html', title='Edit Profile',
                            form=form)
+
+
+@bp.route('/view/<username>/popup')
+@login_required
+def user_popup(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    return render_template('users/view_popup.html', user=user)
