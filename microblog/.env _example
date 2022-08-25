@@ -6,7 +6,7 @@ SECRET_KEY = uma-chave-secreta-com-numeros-e-letras
 
 # variaveis de configuracoes de e-mail
 MAIL_SERVER=smtp.outlook.com
-MAIL_USERNAME=franciscoaclima@outlook.com
+MAIL_USERNAME=<email do usuario>
 MAIL_USE_TLS=1
 MAIL_PORT=587
 MAIL_PASSWORD=<senha do usuario>
